@@ -1,0 +1,47 @@
+The code is performing a linear regression analysis to explore the relationship between the 'Daily Death Count' (independent variable) and the 'StringencyIndex' (dependent variable) 
+based on a dataset from 'IndiaCovid19 - Sheet1.csv'. 
+
+Here's a summary of what the code is doing:
+
+Importing Libraries:
+
+1.pandas (import pandas as pd):pandas is a powerful data manipulation and analysis library. It provides data structures like DataFrames that allow to work with structured data efficiently.
+
+2.numpy (import numpy as np): numpy is converts the data into array,it is used for numerical operations.
+
+3.sklearn (import sklearn):  It includes tools for various machine learning tasks, including linear regression.
+
+4.train_test_split (from sklearn.model_selection import train_test_split):This function from sklearn.model_selection is used to split the data into training and testing sets. It helps in evaluating the performance of machine learning models.
+
+5.LinearRegression (from sklearn.linear_model import LinearRegression):Here Linear Regression model is used for the specified prediction.
+
+6.matplotlib (import matplotlib.pyplot as plt):This function is used for data visualization.
+
+7.datetime (import datetime as dt):The datetime module in Python provides classes for working with dates and times. 
+
+8.statsmodels (import statsmodels.api as sm):statsmodels is a library used for estimating and interpreting models for statistical analysis.
+
+
+Loading the dataset:
+The dataset 'IndiaCovid19 - Sheet1.csv' is loaded using pd.read_csv and stores it in the data DataFrame.
+
+Splitting the Data:
+The dataset is splitted into 'Training' and 'Evaluation' according to Dates.From 01 May,2020 to 28 Feb,2021 this data is used as training_data while from 01 March 2021 to 31 May,2021 is taken as evaluation_data.
+
+
+Linear regression model training:
+The model is trained to learn the relationship between 'Daily Death Count' and 'StringencyIndex'.
+
+Similar to the training data, the code extracts the 'Daily Death Count' (X_eval) and 'StringencyIndex' (Y_eval) for the evaluation period.
+Prediction:
+
+The model is then used to make predictions (predicted) on the evaluation data (X_eval) using the predict method. 
+This predicts the 'StringencyIndex' based on the 'Daily Death Count'.
+
+
+Data Visualization:
+The code uses matplotlib to create a scatter plot of the actual data points from the evaluation data (X_eval and Y_eval) and overlays a red regression line that represents the model's predictions,this helps visualize how well the model fits the data.Moreover,labels and titles are added to the plot for clarity.Finally, it displays the plot, showing the actual data points and the linear regression line.
+
+
+Summary:
+In this code firstly the datset is loaded, then the dataset is splitted into 'training' and 'evaluation' for prediction.After which the linear regression model is called and trained using the training data, and evaluates the model's predictive performance.At last the scatter plot and regression line are created to visually assess how well the model predicts the stringency index based on the daily death count.
